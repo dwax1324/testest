@@ -1,0 +1,8 @@
+::selection {
+  color: rgba(0, 0, 0, 0.99);
+  background: rgba(255, 255, 255, 0.99);
+}
+::-moz-selection {
+  color: rgba(0, 0, 0, 0.99);
+  background: rgba(255, 255, 255, 0.99);
+}
