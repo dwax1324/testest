@@ -36,12 +36,14 @@ const Gt3 = styled.div`
 
 const MiddleGreeting = styled.div`
   margin-top: 20vh;
-  width: 100%;
   height: auto;
   font-size: 48px;
   font-weight: 400;
   width: 50%;
   line-height: 110%;
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+  }
 `;
 
 const PortBox = styled.div`
@@ -49,21 +51,22 @@ const PortBox = styled.div`
   justify-content: center;
 `;
 const Protfolio = styled.div`
+  column-count: 2;
+  column-gap: 0;
   width: 80%;
-  height: 100vh;
-  align-self: center;
+  height: 100%;
   border: 1px solid red;
-  justify-self: center;
   margin-top: 10vh;
-  display: flex;
-  flex-flow: wrap;
+  @media screen and (max-width: 1000px) {
+    display: flex;
+    flex-flow: wrap;
+  }
 `;
 
 const Protfolio1 = styled.div`
-  width: 49.5%;
-  height: 33%;
+  width: 100%;
+  height: 300px;
   border: 1px solid blue;
-  margin-left: 3px;
 `;
 
 const PortTitle = styled.div`
@@ -74,12 +77,26 @@ const PortTitle = styled.div`
   left: 49%;
   top: -2px;
   opacity: 0.8;
+  font-weight: 200;
 `;
 const Pics = styled.div`
   width: 100%;
   height: 100vh;
-  background: linear-gradient(to bottom, black 0%, black 75%, gray 100%);
+  background: linear-gradient(to bottom, black 0%, black 75%, dimgray 100%);
 `;
+
+const Footer = styled.div`
+  width: 100%;
+  height: 50px;
+  font-size: 50px;
+  color: black;
+  position: relative;
+  bottom: 100px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+`;
+
 export default function App() {
   return (
     <Container>
@@ -97,7 +114,7 @@ export default function App() {
         range of design disciplines, manager, advisor, entrepreneur, front-end
         developer, music enthusiast, traveler, photographer and more.
       </MiddleGreeting>
-      <PortTitle>Portfolio</PortTitle>
+      <PortTitle>Sample</PortTitle>
       <PortBox>
         <Protfolio>
           <Protfolio1>Blog</Protfolio1>
@@ -109,6 +126,7 @@ export default function App() {
         </Protfolio>
       </PortBox>
       <Pics></Pics>
+      <Footer>Contact</Footer>
     </Container>
   );
 }
